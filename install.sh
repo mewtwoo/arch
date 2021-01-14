@@ -1,5 +1,8 @@
 #!/bin/sh
 
+# update system
+pacman -Syyu
+
 # file systems utilities
 pacman -S \
           btrfs-progs \
