@@ -1,15 +1,24 @@
 #!/bin/sh
 
+# enable multilib
+sed -i "/\[multilib\]/,/Include/"'s/^#//' /etc/pacman.conf
+
+# add archlinuxcn
+echo '[archlinuxcn]' >> /etc/pacman.conf
+echo 'Server = https://mirrors.ustc.edu.cn/archlinuxcn/$arch'  >> /etc/pacman.conf
+
+pacman -Syy && pacman -S archlinuxcn-keyring
+
 # update system
 pacman -Syyu
 
 # file systems utilities
 pacman -S \
-          btrfs-progs \
-          dosfstools \
-          e2fsprogs \
-          exfatprogs \
-          ntfs-3g
+          btrfs-progs \ # brtfs
+          dosfstools \  # vfat
+          e2fsprogs \   # ext3 ext4
+          exfatprogs \  # exFat
+          ntfs-3g       # ntfs
 
 # fonts
 pacman -S \
