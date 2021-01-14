@@ -32,6 +32,9 @@ pacman -S \
           ttf-font \
           --noconfirm
 
+# xorg
+pacman -S xorg-server --noconfirm
+
 # amdgpu
 pacman -S \
           mesa lib32-mesa \
@@ -39,7 +42,15 @@ pacman -S \
           vulkan-radeon lib32-vulkan-radeon \
           libva-mesa-driver lib32-libva-mesa-driver \
           mesa-vdpau lib32-mesa-vdpau \
+          opencl-mesa lib32-opencl-mesa ocl-icd \
           --noconfirm
+
+# audio
+pacman -S alsa-utils pulseaudio-alsa --noconfirm
           
 # microcode
 pacman -S intel-ucode --noconfirm
+
+# cpu frequency scaling
+pacman -S cpupower --noconfirm
+systemctl enable cpupower
