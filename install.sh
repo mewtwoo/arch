@@ -30,4 +30,5 @@ pacman -S \
           noto-fonts-extra \
           ttf-font
           
-          
+# microcode
+pacman -S intel-ucode 
