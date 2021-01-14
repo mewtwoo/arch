@@ -12,6 +12,9 @@ pacman -Syy --noconfirm && pacman -S archlinuxcn-keyring --noconfirm
 # update system
 pacman -Syyu --noconfirm
 
+# common software
+pacman -S git nano leafpad vim sudo yay grub efibootmgr os-prober --noconfirm
+
 # file systems utilities
 pacman -S \
           btrfs-progs \ # brtfs
@@ -55,5 +58,6 @@ pacman -S intel-ucode --noconfirm
 pacman -S cpupower --noconfirm
 systemctl enable cpupower
 
-# common software
-pacman -S git nano leafpad vim sudo --noconfirm
+# wm
+pacman -S bspwm sxhkd alacritty picom --noconfirm
+yay -S polybar --noconfirm
