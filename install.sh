@@ -61,3 +61,6 @@ systemctl enable cpupower
 # wm
 pacman -S bspwm sxhkd alacritty picom --noconfirm
 yay -S polybar --noconfirm
+
+# fcitx5
+pacman -S fcitx5-im fcitx5-rime --noconfirm
