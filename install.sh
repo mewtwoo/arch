@@ -7,10 +7,10 @@ sed -i "/\[multilib\]/,/Include/"'s/^#//' /etc/pacman.conf
 echo '[archlinuxcn]' >> /etc/pacman.conf
 echo 'Server = https://mirrors.ustc.edu.cn/archlinuxcn/$arch'  >> /etc/pacman.conf
 
-pacman -Syy && pacman -S archlinuxcn-keyring
+pacman -Syy --noconfirm && pacman -S archlinuxcn-keyring --noconfirm
 
 # update system
-pacman -Syyu
+pacman -Syyu --noconfirm
 
 # file systems utilities
 pacman -S \
@@ -18,7 +18,8 @@ pacman -S \
           dosfstools \  # vfat
           e2fsprogs \   # ext3 ext4
           exfatprogs \  # exFat
-          ntfs-3g       # ntfs
+          ntfs-3g \     # ntfs
+          --noconfirm
 
 # fonts
 pacman -S \
@@ -28,7 +29,17 @@ pacman -S \
           noto-fonts-cjk \
           noto-fonts-emoji \
           noto-fonts-extra \
-          ttf-font
+          ttf-font \
+          --noconfirm
+
+# amdgpu
+pacman -S \
+          mesa lib32-mesa \
+          xf86-video-amdgpu \
+          vulkan-radeon lib32-vulkan-radeon \
+          libva-mesa-driver lib32-libva-mesa-driver \
+          mesa-vdpau lib32-mesa-vdpau \
+          --noconfirm
           
 # microcode
-pacman -S intel-ucode 
+pacman -S intel-ucode --noconfirm
