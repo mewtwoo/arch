@@ -54,3 +54,6 @@ pacman -S intel-ucode --noconfirm
 # cpu frequency scaling
 pacman -S cpupower --noconfirm
 systemctl enable cpupower
+
+# common software
+pacman -S git nano leafpad vim sudo --noconfirm
