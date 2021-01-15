@@ -3,7 +3,7 @@
 sudo pacman -S yay
 
 # wm
-sudo pacman -S bspwm sxhkd alacritty picom
+sudo pacman -S bspwm sxhkd alacritty dmenu picom
 sudo yay -S polybar
 
 # lightdm
