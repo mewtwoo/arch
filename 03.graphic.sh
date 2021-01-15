@@ -1,7 +1,7 @@
 #!/bin/sh
 
 # xorg
-sudo pacman -S xorg-server
+sudo pacman -S xorg-server xorg-xrdb
 
 # amdgpu
 sudo pacman -S \
