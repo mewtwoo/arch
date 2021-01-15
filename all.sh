@@ -9,3 +9,4 @@
 ./06.fcitx.sh
 ./07.file_systems.sh
 ./08.wm.sh
+./09.nano.sh
