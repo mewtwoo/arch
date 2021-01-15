@@ -8,3 +8,4 @@
 ./05.cpu_addon.sh
 ./06.fcitx.sh
 ./07.file_systems.sh
+./08.wm.sh
