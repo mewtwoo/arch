@@ -1,4 +1,4 @@
 #!/bin/sh
 
 # update system
-pacman -Syyu
+sudo pacman -Syyu
