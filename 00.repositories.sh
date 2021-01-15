@@ -4,8 +4,10 @@
 sudo sed -i "/\[multilib\]/,/Include/"'s/^#//' /etc/pacman.conf
 
 # add archlinuxcn
-sudo echo '[archlinuxcn]' >> /etc/pacman.conf
-sudo echo 'Server = https://mirrors.ustc.edu.cn/archlinuxcn/$arch'  >> /etc/pacman.conf
+echo '
+[archlinuxcn]
+Server = https://mirrors.ustc.edu.cn/archlinuxcn/$arch
+' | sudo tee -a /etc/pacman.conf
 
 sudo pacman -Syy && sudo pacman -S archlinuxcn-keyring
 
