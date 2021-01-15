@@ -1,7 +1,7 @@
 #!/bin/sh
 
 # file systems utilities
-pacman -S \
+sudo pacman -S \
           btrfs-progs \ # brtfs
           dosfstools \  # vfat
           e2fsprogs \   # ext3 ext4
