@@ -14,7 +14,7 @@ mkdir -p ~/.config/{alacritty,bspwm,picom,polybar,sxhkd}
 
 cp /usr/share/doc/alacritty/example/alacritty.yml ~/.config/alacritty/alacritty.yml
 # cp /usr/share/doc/bspwm/examples/bspwmrc ~/.config/bspwm/bspwmrc
-cp /etc/xdg/picom.conf.example ~/.config/picom/picom.conf
+cp /etc/xdg/picom.conf ~/.config/picom/picom.conf
 cp /usr/share/doc/polybar/config ~/.config//polybar/config
 # cp /usr/share/doc/bspwm/examples/sxhkdrc ~/.config/sxhkd/sxhkdrc
 
