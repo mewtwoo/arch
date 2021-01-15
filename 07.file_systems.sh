@@ -6,4 +6,4 @@ sudo pacman -S \
           dosfstools \  # vfat
           e2fsprogs \   # ext3 ext4
           exfatprogs \  # exFat
-          ntfs-3g \     # ntfs
+          ntfs-3g       # ntfs
