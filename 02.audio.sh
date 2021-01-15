@@ -1,4 +1,4 @@
 #!/bin/sh
 
 # audio
-pacman -S alsa-utils pulseaudio-alsa
+sudo pacman -S alsa-utils pulseaudio-alsa
