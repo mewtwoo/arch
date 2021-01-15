@@ -13,13 +13,13 @@ sudo pacman -S \
           opencl-mesa lib32-opencl-mesa ocl-icd
 
 # Xorg configuration
-sudo echo '
+echo '
 Section "Device"
      Identifier "AMD"
      Driver "amdgpu"
      Option "TearFree" "true"
 EndSection
-' >> /etc/X11/xorg.conf.d/20-amdgpu.conf
+' | sudo tee -a /etc/X11/xorg.conf.d/20-amdgpu.conf > /dev/null
 
 echo '
 Please add "amdgpu" to "/etc/mkinitcpio.conf"
